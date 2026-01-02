@@ -1,0 +1,14 @@
+services:
+  ccr_proxy:
+    container_name: ccr_proxy
+    # Choose ONE of the following:
+    # 1) just pull an existing image (remove the build block): 
+    image: ghcr.io/1rgs/claude-code-proxy:main
+    # # 2) Build the image and tag it as you like:
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - 8082:8082
