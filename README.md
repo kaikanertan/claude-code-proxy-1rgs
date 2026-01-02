@@ -72,7 +72,7 @@ Then, you can either start the container with [docker compose](https://docs.dock
 ```yml
 services:
   proxy:
-    image: ghcr.io/1rgs/claude-code-proxy:latest
+    image: ghcr.io/1rgs/claude-code-proxy:main
     restart: unless-stopped
     env_file: .env
     ports:
